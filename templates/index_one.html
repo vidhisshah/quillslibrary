@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>Quills Library</title>
+</head>
+<body>
+	<header>
+		<div>
+
+	<h1 style="font-family: courier new; padding-top: 3%; padding-left: 2%;padding-bottom: 3%; color: beige; background-color: black; " >Quills Library</h1>
+	{% block content %}
+    {% endblock %}
+	<nav>
+		<ul class="menu">
+			<li><a href="{{ url_for('blog')}}">Blog</a></li>
+			<li><a href="{{url_for('contact')}}">Contact</a></li>
+		</ul>
+	</nav>
+	</div>
+	</header>
+
+</body>
+</html>
