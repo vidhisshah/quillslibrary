@@ -11,7 +11,7 @@ from tqdm import tqdm
 # In[3]:
 
 
-book_df = pd.read_csv('Quills_and_goodreads_db.csv')
+book_df = pd.read_csv('goodreads_info/Quills_and_goodreads_db.csv')
 
 
 # In[4]:
@@ -30,14 +30,15 @@ def get_info_book_picks():
 # In[6]:
 
 
+def create_table():
+    create_df = book_df.drop('Description', axis=1,inplace=False)
+    for i in tqdm(create_df.index):
+        create_df['Title'].iloc[i] = " ".join(create_df['Title'].iloc[i].split("+")) 
+    create_df.to_csv("book_author_rating.csv")    
+
 def display_table():
-    display_df = book_df.drop('Description', axis=1,inplace=False)
-    for i in display_df.index:
-        display_df['Title'].iloc[i] = " ".join(display_df['Title'].iloc[i].split("+")) 
+    display_df = pd.read_csv('goodreads_info/book_author_rating.csv')
     return display_df
-
-
-# In[ ]:
 
 
 

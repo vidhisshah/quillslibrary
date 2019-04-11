@@ -15,7 +15,9 @@ def books():
 	filepath = "../static/images/1984'.jpg"
 	book_name = "1984'.jpg"
 	# print (get_info_book_picks())
-	return render_template("books.html", filepath=filepath, book_picks_info=get_info_book_picks())
+	df = display_table()
+	return render_template("books.html", filepath=filepath, book_picks_info=get_info_book_picks(), tables=[df.to_html(classes='data', header="true")])
+
 
 @app.route('/fake')
 def fake():

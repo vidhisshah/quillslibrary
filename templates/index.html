@@ -14,6 +14,7 @@
 
     <!-- Custom styles for this template -->
     <link href="../static/starter-template.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../static/testimonials.css">
   </head>
 
   <body background="../static/images/book-pages.jpg" style="background-size: cover;">
@@ -60,12 +61,47 @@
     <main role="main" class="container" style="margin-top: 5%;">
     {% block content %}
     <div>
-    <h1 style="font-family: courier new; text-align: center; color: beige; font-size: 500%;"> Quills Library</h1>
+    <h1 style="text-align: center; color: beige; font-size: 500%;"> Quills Library</h1>
+<div class="container" style="margin-top: 5%;">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-4">
+            <img src="../static/images/IMG_20180721_153022-01.jpg" height="60%" width="90%">
+            <br>
+            <!-- <h2>Heading</h2>-->
+            <p class="testimonial">    "Such a nice and cozy place, the hosts are friendly and fun! I love going there, I am not a member there since I live a bit far but every time I am in the neighbourhood I make it a point to drop in. Wish I lived closer, I would go every day! :)"
+
+- Kevin J </p>
+            <!--<p><a class="btn btn-secondary" href="#" role="button">View details »</a></p> -->
+          </div>
+          <div class="col-md-4">
+            <img src="../static/images/IMG_20171028_184404.jpg" height="60%" width="90%">
+            <!-- <h2>Heading</h2>-->
+            <p class="testimonial">"It is a  good place with a decent collection of books ,but more importantly good place to read them" 
+            - Mohamed Sarfaras</p>
+            <!--<p><a class="btn btn-secondary" href="#" role="button">View details »</a></p> -->
+          </div>
+          <div class="col-md-4">
+            <img src="../static/images/IMG_20180721_152822-01.jpg" height="60%" width="90%">
+
+            <!-- <h2>Heading</h2>-->
+            <p class="testimonial">"It's a homely place with quite a good collection of books and run by a helpful librarian."
+            - Sherel Crasta</p>
+            <!--<p><a class="btn btn-secondary" href="#" role="button">View details »</a></p> -->
+          </div>
+        </div>
+
+        <hr>
+
+      </div> <!-- /container -->
+
     <!-- <form class="form-inline my-2 my-lg-0">
     <input  class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form> -->
   </div>
+
+  
     {% endblock %}
 
 <!--       <div class="starter-template">
