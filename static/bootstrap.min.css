@@ -15,3 +15,7 @@ p{
 	font-family: 'Arial';
 	text-align: justify;	
 }
+
+th{
+	text-align: left;
+}

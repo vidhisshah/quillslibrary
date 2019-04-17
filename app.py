@@ -16,7 +16,8 @@ def books():
 	book_name = "1984'.jpg"
 	# print (get_info_book_picks())
 	df = display_table()
-	return render_template("books.html", filepath=filepath, book_picks_info=get_info_book_picks(), tables=[df.to_html(classes='data', header="true")])
+	return render_template("books.html", filepath=filepath, book_picks_info=get_info_book_picks(), \
+		tables=[df.to_html(classes='data', header="true", table_id='myTable')])
 
 
 @app.route('/fake')
@@ -25,11 +26,11 @@ def fake():
 
 @app.route('/blog')
 def blog():
-	return render_template("blog.html")
+	return render_template("blog.html", book_picks_info=get_info_book_picks())
 
 @app.route('/events')
 def events():
-	return("Upcoming events")
+	return render_template('events.html')
 
 # debatable. should come with blog?
 @app.route('/Newsletter')
