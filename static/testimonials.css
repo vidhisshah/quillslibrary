@@ -1,0 +1,13 @@
+.testimonial{
+	width: 90%;
+	color: white;
+	background-color: #00000077;;
+	margin-top: 3%;
+	padding: 1%;
+}
+
+#map {
+   width: 100%;
+   height: 400px;
+   background-color: grey;
+}

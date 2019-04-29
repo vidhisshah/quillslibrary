@@ -1,0 +1,29 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  z-index: -1;
+}
+
+th{
+  text-align: left;
+  background-color: bisque;
+  color: black;
+  font-weight: bold;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: tan;
+  opacity: 0.9;
+}
+
+tr:nth-child(odd){
+  background-color: bisque;
+  opacity: 0.7;
+}
