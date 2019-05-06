@@ -1,141 +1,128 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../static/images/ql_lowres.png">
-
-    <title>Quills Library</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="../static/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="../static/starter-template.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../static/testimonials.css">
-  </head>
-
-  <body background="../static/images/book-pages.jpg" style="background-size: cover;">
-
-
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark" style="margin-top: 1%; margin-bottom: 0.5%;">
-      <!-- <a class="navbar-brand" href="#">Quills</a> -->
-      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button> -->
-      <a href="{{url_for('index')}}" ><img src="../static/images/ql.png" height="30"></a>
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault" style="margin-left: 65%;">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="{{url_for('index')}}">Home<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('books')}}">Books</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('fake')}}"> AI Generated Books</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('blog')}}">Newsletter</a>
-          </li>
-
-<!--           <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li> -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="{{ url_for('events')}}" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="{{ url_for('events')}}">Book Club Meeting</a>
-              <a class="dropdown-item" href="{{ url_for('events')}}">Poetry Jam</a>
-              <a class="dropdown-item" href="{{ url_for('events')}}">Writing Workshop</a>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="../static/images/ql_lowres.png">
+        <title>Quills Library</title>
+        <!-- Bootstrap core CSS -->
+        <link href="../static/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="../static/starter-template.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../static/testimonials.css">
+    </head>
+    <body background="../static/images/book-pages.jpg" style="background-size: cover;">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark" style="margin-top: 1%; margin-bottom: 0.5%;">
+            <!-- <a class="navbar-brand" href="#">Quills</a> -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            <a href="{{url_for('index')}}" ><img src="../static/images/ql.png" height="30"></a>
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault" style="margin-left: 65%;">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{url_for('index')}}">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('books')}}">Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('fake')}}"> AI Generated Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('blog')}}">Newsletter</a>
+                    </li>
+                    <!--           <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                        </li> -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{{ url_for('events')}}" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item" href="{{ url_for('events')}}">Book Club Meeting</a>
+                            <a class="dropdown-item" href="{{ url_for('events')}}">Poetry Jam</a>
+                            <a class="dropdown-item" href="{{ url_for('events')}}">Writing Workshop</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('contact')}}">Contact</a>
+                    </li>
+                </ul>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('contact')}}">Contact</a>
-          </li>
-        </ul>
-
-      </div>
-    </nav>
-
-    <main role="main" class="container" style="margin-top: 3%;">
-    {% block content %}
-    <div style="text-align: center; color: beige;">
-    <!-- <h1 style="font-family:Rochester;" > Quills Library</h1> -->
-    <img src="../static/images/ql.png" height="90">
-    <h4>Library in the heart of Bangalore</h4>
-    <h4>Open: Wednesdays and Weekends</h4>
-    </div>
-<div class="container" style="margin-top: 5%;">
-        <!-- Example row of columns -->
-        <div class="row" style="background-color: #77777777; padding-top: 2%; padding-left: 3%;">
-          <div class="col-md-4">
-            <img src="../static/images/IMG_20180721_153022-01.jpg" height="60%" width="90%">
-            <br>
-            <!-- <h2>Heading</h2>-->
-            <p class="testimonial">    "Such a nice and cozy place, the hosts are friendly and fun! I love going there. Wish I lived closer, I would go every day! :)"
-
-- Kevin J </p>
-            <!--<p><a class="btn btn-secondary" href="#" role="button">View details »</a></p> -->
-          </div>
-          <div class="col-md-4">
-            <img src="../static/images/IMG_20171028_184404.jpg" height="60%" width="90%">
-            <!-- <h2>Heading</h2>-->
-            <p class="testimonial" style="height: inherit;">"It is a  good place with a decent collection of books ,but more importantly good place to read them" 
-            - Mohamed Sarfaras</p>
-            <!--<p><a class="btn btn-secondary" href="#" role="button">View details »</a></p> -->
-          </div>
-          <div class="col-md-4">
-            <img src="../static/images/IMG_20180721_152822-01.jpg" height="60%" width="90%">
-
-            <!-- <h2>Heading</h2>-->
-            <p class="testimonial">"It's a homely place with quite a good collection of books and run by a helpful librarian."
-            - Sherel Crasta</p>
-            <!--<p><a class="btn btn-secondary" href="#" role="button">View details »</a></p> -->
-          </div>
-        </div>
-
+        </nav>
+        <main role="main" class="container" style="margin-top: 3%;">
+            {% block content %}
+            <div style="text-align: center; color: beige;">
+                <!-- <h1 style="font-family:Rochester;" > Quills Library</h1> -->
+                <img src="../static/images/ql.png" height="90">
+                <h4>Library in the heart of Bangalore</h4>
+                <h4>Open: Wednesdays and Weekends</h4>
+            </div>
+            <div class="container" style="margin-top: 5%;">
+                <!-- Example row of columns -->
+                <div class="row" style="background-color: #77777777; padding-top: 2%; padding-left: 3%;">
+                    <div class="col-md-4">
+                        <img src="../static/images/IMG_20180721_153022-01.jpg" height="60%" width="90%">
+                        <br>
+                        <!-- <h2>Heading</h2>-->
+                        <p class="testimonial">    "Such a nice and cozy place, the hosts are friendly and fun! I love going there. Wish I lived closer, I would go every day! :)"
+                            - Kevin J 
+                        </p>
+                        <!--<p><a class="btn btn-secondary" href="#" role="button">View details »</a></p> -->
+                    </div>
+                    <div class="col-md-4">
+                        <img src="../static/images/IMG_20171028_184404.jpg" height="60%" width="90%">
+                        <!-- <h2>Heading</h2>-->
+                        <p class="testimonial" style="height: inherit;">"It is a  good place with a decent collection of books ,but more importantly good place to read them" 
+                            - Mohamed Sarfaras
+                        </p>
+                        <!--<p><a class="btn btn-secondary" href="#" role="button">View details »</a></p> -->
+                    </div>
+                    <div class="col-md-4">
+                        <img src="../static/images/IMG_20180721_152822-01.jpg" height="60%" width="90%">
+                        <!-- <h2>Heading</h2>-->
+                        <p class="testimonial">"It's a homely place with quite a good collection of books and run by a helpful librarian."
+                            - Sherel Crasta
+                        </p>
+                        <!--<p><a class="btn btn-secondary" href="#" role="button">View details »</a></p> -->
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <!-- /container -->
+            <!-- <form class="form-inline my-2 my-lg-0">
+                <input  class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form> -->
+            {% endblock %}
+            <!--       <div class="starter-template">
+                <h1>Bootstrap starter template</h1>
+                <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+                </div> -->
+        </main>
+        <!-- /.container -->
         <hr>
+        <footer class="container" style="color: beige; margin-top: 2%;">
+            <p style="text-align: right;">&copy; Quills Library</p>
+            <p style="text-align: right;"> Created by <a href="https://vidhisshah.github.io">vidhisshah</a> </p>
+        </footer>
+        <!-- Bootstrap core JavaScript
+            ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/javascript">
+          console.log(location.pathname);
+       $(document).ready(function() {
+  $('li.active').removeClass('active');
+  $('a[href="' + location.pathname + '"]').closest('li').addClass('active'); 
 
-
-
-      </div> <!-- /container -->
-
-    <!-- <form class="form-inline my-2 my-lg-0">
-    <input  class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form> -->
-  
-
-  
-    {% endblock %}
-
-<!--       <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-      </div> -->
-
-
-
-    </main><!-- /.container -->
-    <hr>
-
-    <footer class="container" style="color: beige; margin-top: 2%;">
-      <p style="text-align: right;">&copy; Quills Library</p>
-      <p style="text-align: right;"> Created by <a href="https://vidhisshah.github.io">vidhisshah</a> </p>
-    </footer>
-
-
-
-     <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<!--     <script>window.jQuery || document.write('<script src="../static/js/jquery-slim.min.js"><\/script>')</script> -->
-    <script src="../static/js/popper.min.js"></script>
-    <!--Needed for carousel? -->
-    <script src="../static/js/bootstrap.min.js"></script>
-  </body>
+        });
+        </script>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <!--     <script>window.jQuery || document.write('<script src="../static/js/jquery-slim.min.js"><\/script>')</script> -->
+        <script src="../static/js/popper.min.js"></script>
+        <!--Needed for carousel? -->
+        <script src="../static/js/bootstrap.min.js"></script>
+    </body>
 </html>

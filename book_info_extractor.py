@@ -1,21 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
-
-
 import pandas as pd
-# from tqdm import tqdm
-
-
-# In[3]:
-
 
 book_df = pd.read_csv('Quills_and_goodreads_db.csv')
-
-
-# In[4]:
-
 
 def get_info_book_picks():    
     book_picks = ["1984'","Alchemist", "Wintercraft"]
@@ -27,9 +15,6 @@ def get_info_book_picks():
     return book_picks_df
 
 
-# In[6]:
-
-
 def create_table():
     create_df = book_df.drop('Description', axis=1,inplace=False)
     for i in create_df.index:
@@ -39,7 +24,3 @@ def create_table():
 def display_table():
     display_df = pd.read_csv('book_author_rating.csv')
     return display_df
-
-
-
-
