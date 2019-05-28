@@ -2,28 +2,27 @@
 <html>
 <head>
 	<title>Quills Library</title>
-    
+ <link href="../static/bootstrap.min.css" rel="stylesheet">
 </head>
 <body >
 	{% extends "index.html" %}
-    {% block content %}
-    <div style="text-align: center;">
+ {% block content %}
+ <div style="text-align: center;">
 	<h3>Past Events:</h3>
-	
-	<img src="../static/images/chess_contest.jpg" width="40%">
-	<h4 style="color: black;">Chess contest</h4>
-	<img src="../static/images/entrepreneurship_talk.jpg" width="40%">
-	<h4 style="color: black;">Entrepreneurship session</h4>
-	<img src="../static/images/movie_screening.jpg" width="40%">
-	<h4 style="color: black;">Movie screening</h4>
-	<img src="../static/images/poetry_slam.jpg" width="40%">
-	<h4 style="color: black;">Poetry Slam</h4>
-	<img src="../static/images/transgender_talk.jpg" width="40%">
-	<h4 style="color: black;">Transgender talk</h4>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<div class="row">
+		<div class="col-md-4"> <img src="../static/images/chess_contest.jpg" width="70%">
+		<h4>Chess contest</h4></div>
+		<div class="col-md-4"> <img src="../static/images/entrepreneurship_talk.jpg" width="70%">
+		<h4>Entrepreneurship session</h4></div>
+		<div class="col-md-4"> <img src="../static/images/movie_screening.jpg" width="70%">
+		<h4>Movie screening</h4></div>
+		<div class="col-md-4"> <img src="../static/images/poetry_slam.jpg" width="70%">
+		<h4>Poetry Slam</h4></div>
+		<div class="col-md-4"> <img src="../static/images/transgender_talk.jpg" width="70%">
+		<h4>Transgender talk</h4></div>
+	</div>		
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	{% endblock %}
 	</div>
 </body>
 </html>
-
-
